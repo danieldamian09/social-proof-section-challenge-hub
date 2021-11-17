@@ -1,0 +1,132 @@
+/* Import font, root y * */
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root {
+    
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Spartan", sans-serif;
+    font-size: 15px;
+}
+
+
+/* Medidas del container y columnas */
+
+/*.container{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 2fr;
+  
+}*/
+
+
+
+/* Diseño boxes, titulo, textos, imgs */
+
+.title h2 {
+    color: var(--very-dark-magenta);
+    font-size: 3rem;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.title p {
+    color: var(--dark-grayish-magenta);
+    text-align: center;
+    padding: 0.1rem; 
+    font-size: 1.2rem;
+}
+
+.title {
+    text-align: center;
+    
+}
+.rated {
+  
+    color: var(--very-dark-magenta);
+}
+
+
+
+.card1, .card2, .card3 {
+    background: var(--very-dark-magenta);
+    color: var(--light-grayish-magenta);
+    border-radius: 0.5rem;
+    width: 95%;
+    height: 70%;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.rate1, .rate2, .rate3 {
+    background: var(--light-grayish-magenta);
+    border-radius: 0.5rem;
+    width: 95%;
+    height: 100%;
+    margin: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+span {
+    color: var(--soft-pink);
+}
+
+img {
+    border-radius: 100%;
+    max-width: 5%;
+}
+
+.card_header {
+    display: flex;
+}
+
+.description {
+    margin-top: 1.3%;
+    margin-left: 1.5%;
+}
+
+/* Media queries */
+
+/* Footer */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 375px) {
+    .container-1{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      .container-2{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+      
+      .container-3 {
+          display: grid;
+          grid-template-rows: 1fr 1fr 1fr;
+      }
+} 
