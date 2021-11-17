@@ -3,25 +3,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
 
 :root {
-    
-    --very-dark-magenta: hsl(300, 43%, 22%);
-    --soft-pink: hsl(333, 80%, 67%);
-    --dark-grayish-magenta: hsl(303, 10%, 53%);
-    --light-grayish-magenta: hsl(300, 24%, 96%);
-    --white: hsl(0, 0%, 100%);
+
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
 
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 
 body {
-    font-family: "Spartan", sans-serif;
-    font-size: 15px;
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+}
+
+.container {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr;
+  gap: 4px 4px;
+  grid-auto-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.container-1 {
+  display: grid;
+  grid-template-columns: 40% 50%;
+  grid-template-rows: 1fr;
+  gap: 5% 5%;
+  grid-template-areas:
+    ". container-2";
+}
+
+.container-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 70px 70px;
+  gap: 0px 0px;
+  grid-template-areas:
+    "."
+    "."
+    ".";
+  grid-area: container-2;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-area: ".card1";
+  grid-template-areas:
+    "card1 card2 card3";
 }
 
 
@@ -38,67 +78,74 @@ body {
 
 /* Diseño boxes, titulo, textos, imgs */
 
+.title {
+  text-align: center;
+  width: 500px;
+}
+
 .title h2 {
-    color: var(--very-dark-magenta);
-    font-size: 3rem;
-    padding: 2rem;
-    margin-top: 3rem;
+  color: var(--very-dark-magenta);
+  font-size: 3rem;
+  padding: 2rem;
+  margin-top: 3rem;
 }
 
 .title p {
-    color: var(--dark-grayish-magenta);
-    text-align: center;
-    padding: 0.1rem; 
-    font-size: 1.2rem;
+  color: var(--dark-grayish-magenta);
+  text-align: center;
+  padding: 0.1rem;
+  font-size: 1.2rem;
 }
 
-.title {
-    text-align: center;
-    
-}
+
+
 .rated {
-  
-    color: var(--very-dark-magenta);
+
+  color: var(--very-dark-magenta);
 }
 
 
 
-.card1, .card2, .card3 {
-    background: var(--very-dark-magenta);
-    color: var(--light-grayish-magenta);
-    border-radius: 0.5rem;
-    width: 95%;
-    height: 70%;
-    padding: 2rem;
-    margin: 1rem;
+.card1,
+.card2,
+.card3 {
+  background: var(--very-dark-magenta);
+  color: var(--light-grayish-magenta);
+  border-radius: 0.5rem;
+  width: 95%;
+  height: 200px;
+  padding: 2rem;
+  margin: 1rem;
 }
 
-.rate1, .rate2, .rate3 {
-    background: var(--light-grayish-magenta);
-    border-radius: 0.5rem;
-    width: 95%;
-    height: 100%;
-    margin: 0.5rem;
-    padding: 2rem;
-    text-align: center;
+.rate1,
+.rate2,
+.rate3 {
+  background: var(--light-grayish-magenta);
+  border-radius: 0.5rem;
+  width: 95%;
+  height: 100%;
+  margin: 0.5rem;
+  padding: 2rem;
+  text-align: center;
 }
 
 span {
-    color: var(--soft-pink);
+  color: var(--soft-pink);
 }
 
 img {
-    border-radius: 100%;
-    max-width: 5%;
+  border-radius: 100%;
+  max-width: 5%;
 }
 
 .card_header {
-    display: flex;
+  display: flex;
 }
 
 .description {
-    margin-top: 1.3%;
-    margin-left: 1.5%;
+  margin-top: 1.3%;
+  margin-left: 1.5%;
 }
 
 /* Media queries */
@@ -109,24 +156,25 @@ img {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
 @media only screen and (max-width: 375px) {
-    .container-1{
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr;
-      }
-      
-      .container-2{
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-      }
-      
-      .container-3 {
-          display: grid;
-          grid-template-rows: 1fr 1fr 1fr;
-      }
-} 
+  .container-1 {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .container-2 {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .container-3 {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
