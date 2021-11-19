@@ -22,6 +22,8 @@
 body {
   font-family: "Spartan", sans-serif;
   font-size: 15px;
+  background: url(./images/bg-pattern-bottom-desktop.svg) 355px 9px no-repeat,
+              url(./images/bg-pattern-top-desktop.svg) 0px 0px no-repeat;
 }
 
 
@@ -47,10 +49,12 @@ body {
 
 .container {
   display: grid;
+  grid-gap: 0.2rem;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-    'title rated'
-    'cards cards'
-    'footer footer'
+    'title rated rated'
+    'cards cards cards'
+    'footer footer footer'
   ;
 }
 
@@ -70,6 +74,7 @@ body {
 .title {
   text-align: center;
   width: 500px;
+  padding-bottom:15px;
 }
 
 .title h2 {
@@ -95,7 +100,7 @@ body {
   border-radius: 0.5rem;
   width: 30%;
   height: 180px;
-  padding: 2rem;
+  padding: 3rem;
   margin: 1rem;
 }
 
@@ -163,6 +168,145 @@ img {
   .card1,
   .card2,
   .card3{
-    width: 100%;
+    width: 95%;
+    margin: 0.8rem auto;
+    padding: 2.5rem; 
+    height: 350px;
   }
+.rate1,
+.rate2,
+.rate3 {
+width: 100%;
+margin: 0rem 1.2rem 1rem 0rem;
+margin-block: 0.5rem;
+}
+.rated {
+padding: 12px 15px 12px 15px;
+}
+
+.description {
+  margin-top: 2%;
+  margin-left: 7%;
+  text-align:left;
+}
+
+.cards {
+  font-size: 16px;
+  text-align: center;
+  margin: 0.7rem;
+}
+
+.text {
+  margin-top: 13%;
+  line-height: 2.2rem;
+  text-align: left;
+}
+}
+
+@media only screen and (max-width: 1441px) and (min-width: 600px) {
+
+.rated {
+  width: 60%;
+  align-items: center;
+  margin-top: 4.5rem;
+  margin-left:124px;
+}
+
+.rate1, .rate2, .rate3 {
+  display: flex;
+  justify-content: flex-start;
+  height: 4.2rem;
+  margin: 0.5rem;
+}
+
+.rate1 h4, .rate2 h4, .rate3 h4 {
+  margin-top: 0.3rem;
+  margin-left: 2rem;
+}
+
+.rate1 img, .rate2 img, .rate3 img {
+  padding-inline: 0.3rem;
+  height: 1.2rem;
+  
+  
+  
+
+  
+}
+
+
+.rate1 {
+  margin-left: 5rem;
+  align-content: center;
+  align-items: center;
+ 
+}
+
+.rate2 {
+  margin-left: 13rem;
+  align-content: center;
+  align-items: center;
+}
+
+.rate3 {
+  margin-left: 21rem;
+  align-content: center;
+  align-items: center;
+}
+
+.title p {
+  text-align: left;
+  padding-inline: -20px;
+  width: 120%;
+  margin-left: 1rem;
+  font-size: 20px;
+}
+
+.cards {
+  margin-top: 1.7rem;
+}
+
+.card1, .card2, .card3{
+ height:14.5rem;
+ width:30%;
+ line-height:22px;
+}
+.card2{
+  margin-top:35px;
+}
+.card3{
+  margin-top:55px;
+}
+
+.title  {
+  text-align: left;
+}
+
+.title h2 {
+  padding: 1rem;
+}
+
+
+.container {
+  margin-left: 25px;
+}
+
+.card_header img {
+  max-width: 15%;
+}
+.card_header .description {
+
+  margin-left: 1.5rem;
+}
+
+.text {
+
+  margin-top : 1.5rem;
+}
+
+.card_header {
+
+  margin-top: 0rem;
+
+}
 }
